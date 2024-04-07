@@ -1,0 +1,79 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Your head content here -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bankviewstyle.css') }}">
+</head>
+<body>
+    <div id="sidenav" class="nav">
+        <a href="#" id="home">Home<i class="bx bx-home-alt-2"></i></a>
+        <a href="#" id="profile">Profile<i class="bx bxs-user"></i></a>
+        <a href="{{ url_for('confirm_logout') }}" id="logout">LogOut<i class="bx bxs-logout"></i></a>
+    </div>
+    <div class="header">
+        <h1>Dashboard</h1>
+    </div>
+
+    <!-- Display the retrieved data for the 'accountt' section -->
+    <div id="account_data" class="pane" value ="account_data">
+        <h2>Account details</h2>
+        {% if account_data %}
+            <p>Account No: {{ account_data[0] }}</p>
+            <p>Account Type: {{ account_data[1] }}</p>
+            <p>Balance: {{ account_data[2]}}</p>
+        {% else %}
+            <p>No account data available.</p>
+        {% endif %}
+    </div>
+
+    <!-- Display the retrieved data for the 'loandetails' section -->
+    <div id="loan_data" class="pane" value = "loan_data">
+        <h2>Loan details</h2>
+        {% if loan_data %}
+            <p>Loan ID: {{ loan_data[0] }}</p>
+            <p>Loan Type: {{ loan_data[1] }}</p>
+            <p>Amount: {{ loan_data[2] }}</p>
+        {% else %}
+            <p>No loan data available.</p>
+        {% endif %}
+    </div>
+
+    <!-- Display the retrieved data for the 'Bankdetails' section -->
+    <div id="bank" class="pane" value = "bank">
+        <h2>Bank Details</h2>
+        {% if branch_data %}
+            <p>Branch ID: {{ bank[0] }}</p>
+            <p>Branch Name: {{ bank[1] }}</p>
+            <p>Branch Address: {{ bank[2] }}</p>
+        {% else %}
+            <p>No bank data available.</p>
+        {% endif %}
+    </div>
+
+    <!-- Display the retrieved data for the 'branch' section -->
+    <div id="branch_data" class="pane" value = "branch_data">
+        <h2>Bank Branch Details</h2>
+        {% if branch_data %}
+            <p>Branch_id: {{ branch_data[0] }}</p>
+            <p>Branch_name: {{ branch_data[1] }}</p>
+            <p>Branch_address: {{ branch_data[2] }}</p>
+        {% else %}
+            <p>No branch data available.</p>
+        {% endif %}
+    </div>
+
+    <!-- Display the customer data for the 'customer' section -->
+    <div id="customer_data" class="pane" value = "customer_data">
+        <h2>Customer Details</h2>
+        {% if account_data %}
+            <p>Customer ID: {{ customer_data[0] }}</p>
+            <p>Customer Name: {{ customer_data[1] }}</p>
+            <p>Phone number: {{ customer_data[2] }}</p>
+            <p>Address: {{customer_data[3] }}</p>
+            {% else %}
+                <p>No account data available.</p>
+            {% endif %}
+        </div>
+</body>
+</html>

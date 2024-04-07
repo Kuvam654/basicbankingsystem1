@@ -1,0 +1,18 @@
+<!-- logout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Your head content here -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Logout</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Logout</h1>
+        <p>Are you sure you want to logout?</p>
+        <form method="post" action="{{ url_for('confirm_logout') }}">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+</body>
+</html>
