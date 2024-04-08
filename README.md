@@ -18,6 +18,6 @@ PHP: Backend scripting language for server-side processing and database interact
 MySQL: Database management system for storing user registration data.
 
 To install Flask
-'''bash
+```bash
 pip install Flask
-'''
+```
