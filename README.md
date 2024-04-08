@@ -16,3 +16,8 @@ HTML/CSS: Frontend development for creating the user interface.
 Bootstrap: Utilized for styling and responsive design components.
 PHP: Backend scripting language for server-side processing and database interactions.
 MySQL: Database management system for storing user registration data.
+
+To install Flask
+'''bash
+pip install Flask
+'''
