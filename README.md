@@ -36,3 +36,8 @@ To view the project report
 ```link
 https://drive.google.com/drive/folders/1VyKXEV2klr-nSlEaAYuqTCiT5bqiCMVS?usp=sharing
 ```
+
+To run the project
+```link
+python FLASK_CODE.py
+```
